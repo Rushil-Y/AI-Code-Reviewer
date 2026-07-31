@@ -1,120 +1,150 @@
 # AI Code Reviewer
 
-AI Code Reviewer is a web application that allows users to submit code and receive AI-generated reviews. The project is built using **React, Express, Node.js, MySQL, and Prisma ORM**. The AI reviews are powered by **Google Gemini Flash 2.0 API**.
+An AI-powered full-stack application that analyzes source code and provides intelligent feedback to help developers improve code quality, readability, security, and performance.
+
+This project was built using React, Node.js, Express, MySQL, Prisma ORM, and AI integration to create an automated code review assistant.
 
 ## 🚀 Features
 
-- **User Authentication** (Register/Login) using JWT & bcrypt
-- **AI-Powered Code Review** using Google Gemini Flash 2.0 API
-- **Code Editor** with syntax highlighting
-- **View & Manage Past Reviews**
-- **Secure API with Token-Based Authentication**
-- **Professional UI using Tailwind CSS**
+- AI-powered code review and feedback
+- Analyze source code quality and readability
+- Identify potential bugs and improvement areas
+- Suggest performance optimizations
+- Provide security recommendations
+- Full-stack architecture with React frontend and Node.js backend
+- Store code review results using MySQL and Prisma ORM
 
 ## 🛠️ Tech Stack
 
-### Frontend:
+### Frontend
 
 - React.js
+- Vite
+- JavaScript
 - Tailwind CSS
-- React Router
 - Axios
-- Prism.js (for code highlighting)
 
-### Backend:
+### Backend
 
 - Node.js
 - Express.js
 - Prisma ORM
 - MySQL
-- JWT (Authentication)
-- Bcrypt.js (Password Hashing)
 
-### AI Integration:
+### AI Integration
 
-- Google Gemini Flash 2.0 API
+- Google Gemini API
+
+## 📂 Project Structure
+
+```
+AI-Code-Reviewer
+│
+├── frontend        # React frontend application
+│
+├── backend         # Express backend API
+│
+└── interface       # UI assets
+```
 
 ## 📌 Installation & Setup
 
-### 1️⃣ Clone the Repository
+### 1. Clone the Repository
 
-```sh
-git clone https://github.com/abdul-wahab619/ai-code-reviewer.git
-cd ai-code-reviewer
+```bash
+git clone https://github.com/Rushil-Y/AI-Code-Reviewer.git
+cd AI-Code-Reviewer
 ```
 
-### 2️⃣ Backend Setup
+## 2. Backend Setup
 
-#### Install dependencies:
+Navigate to the backend folder:
 
-```sh
+```bash
 cd backend
+```
+
+Install dependencies:
+
+```bash
 npm install
 ```
 
-#### Set up `.env` file:
-
-Create a `.env` file in the **backend** directory with the following variables:
+Create a `.env` file inside the backend directory:
 
 ```env
-DATABASE_URL=mysql://root:password@localhost:3306/code-reviewer
-JWT_SECRET=your_secret_key
-GEMINI_API_KEY=your_gemini_api_key
+DATABASE_URL="mysql://root:password@localhost:3306/code-reviewer"
+JWT_SECRET="your_secret_key"
+GEMINI_API_KEY="your_api_key"
 ```
 
-#### Run Prisma Migrations:
+Run Prisma migrations:
 
-```sh
-npx prisma migrate dev --name init
+```bash
+npx prisma migrate dev
 ```
 
-#### Start the backend server:
+Start the backend server:
 
-```sh
-npm start
+```bash
+node server.js
 ```
 
-Backend will run on `http://localhost:3000`.
+Backend will run on:
 
-### 3️⃣ Frontend Setup
+```
+http://localhost:3000
+```
 
-#### Install dependencies:
+## 3. Frontend Setup
 
-```sh
+Open another terminal and navigate to the frontend folder:
+
+```bash
 cd frontend
+```
+
+Install dependencies:
+
+```bash
 npm install
 ```
 
-#### Start the frontend server:
+Start the frontend development server:
 
-```sh
+```bash
 npm run dev
 ```
 
-Frontend will run on `http://localhost:5173`.
+Frontend will run on:
 
-## 📡 API Endpoints
+```
+http://localhost:5173
+```
 
-### **Auth Routes**
+## 📡 API Endpoint
 
-| Method | Route          | Description          |
-| ------ | -------------- | -------------------- |
-| POST   | /auth/register | Register a new user  |
-| POST   | /auth/login    | Login user & get JWT |
+### AI Code Review
 
-### **AI Review Routes**
+| Method | Route            | Description                                   |
+| ------ | ---------------- | --------------------------------------------- |
+| POST   | `/ai/get-review` | Submit code and receive AI-generated feedback |
 
-| Method | Route                | Description                 |
-| ------ | -------------------- | --------------------------- |
-| POST   | /ai/get-review       | Submit code & get AI review |
-| GET    | /ai/past-prompts     | Get past reviews            |
-| DELETE | /ai/past-prompts/:id | Delete a past review        |
-| PUT    | /ai/past-prompts/:id | Update a past review        |
+## 🔮 Future Improvements
+
+- Add user authentication
+- Save review history for users
+- Support multiple programming languages
+- Add code quality scoring
+- Improve AI review customization
 
 ## 📷 Screenshots
 
-![AI Code Reviewer](/interface/AI-Code-Reviewer.png)
+Add application screenshots here.
 
-## 📝 License
+## 👨‍💻 Author
 
-This project is open-source and available under the [MIT License](LICENSE).
+**Rushil Reddy**
+
+GitHub:  
+https://github.com/Rushil-Y
